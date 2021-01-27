@@ -6,6 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <form action="produits.php" method="post"
+        
+    ></form>
 </body>
 </html>
