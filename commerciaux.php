@@ -15,16 +15,16 @@
         </ul>
     </nav>
     <form action="commerciaux.php" method="post">
-        <div>
-            <label for="nom_commerciaux">Nom :</label>
-            <input type="text" id="nom_commerciaux" name="nom-commerciaux">
+        <div class="form-floating m-4">
+            <input type="text" class="form-control" id="floatingInput">
+            <label for="floatingInput">Name</label>
         </div>
         <div>
             <label for="date_inscription">Date :</label>
             <input type="date" id="date_inscription" name="date_inscription">
         </div>
         <div>
-            <input type="submit" value="Send">
+            <input class="btn btn-primary" type="submit" value="Send">
         </div>
     </form>
 </body>
