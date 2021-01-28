@@ -19,12 +19,12 @@
             <label for="id_produit">id_produit</label>
             <input type="number" id="id_produit" name="id_produit"> 
         </div>
-        <div>
-            <label for="nom_produit">nom_produit</label>
-            <input type="text" id="nom_produit" name="name">
+        <div class="form-floating m-4">
+            <input type="text" class="form-control" id="floatingInput">
+            <label for="floatingInput">Nom produits</label>
         </div>
         <div>
-            <input type="submit" value="Send">
+            <input class="btn btn-primary" type="submit" value="Send">
         </div>
     </form>
 </body>
