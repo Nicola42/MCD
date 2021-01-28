@@ -21,7 +21,7 @@
         </div>
         <div>
             <label for="date_inscription">Date :</label>
-            <input type="date" id="date_inscription" name="date_inscription">
+            <input class="form-control" type="date" placeholder="Readonly input here..." id="date_inscription" name="date_inscription">
         </div>
         <div>
             <input class="btn btn-primary" type="submit" value="Send">

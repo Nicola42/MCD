@@ -4,3 +4,13 @@
 }
 
 
+.form-control {
+    color: blue;
+    text-align: center;
+    width: 200px;
+}
+
+
+.btn btn-primary {
+    padding-top: 150px;
+}
