@@ -1,0 +1,16 @@
+*{
+    margin: 15px;
+}
+
+body {
+    text-align: center;
+    background-color: rgb(188, 204, 202);
+    
+} 
+
+nav > ul {
+    list-style-type: none;
+
+}
+
+
