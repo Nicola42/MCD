@@ -27,5 +27,26 @@
             <input class="btn btn-primary" type="submit" value="Send">
         </div>
     </form>
+
+    <?php
+    $servername= 'localhost';
+    $dataname= 'bureautique';
+    $user ='root';
+    $nom_commerciaux=$_POST["floatingInput"];
+    $date_inscription=$_POST["date_inscription"];
+
+    try {
+        $connect = new PDO("mysql:host=$servername; dbname=$dataname",$user);
+
+        $variable = $connect->prepare ("INSERT INTO commerciaux (nom_commerciaux, date_inscription) VALUE (:floatingInput, :date_inscription)");
+        $variable->bindParam(':floatingInput', $nom_commerciaux);
+        $variable->bindParam(':date_inscription', $date_inscription);
+        $variable->execute();
+    }
+
+    catch (PDOException $e) {
+        echo "Erreur : ". $e->getMessage();
+    }
+    ?>
 </body>
 </html>
