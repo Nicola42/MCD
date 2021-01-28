@@ -29,6 +29,7 @@
     </form>
 
     <?php
+    
     $servername= 'localhost';
     $dataname= 'bureautique';
     $user ='root';
@@ -37,7 +38,9 @@
 
     try {
         $connect = new PDO("mysql:host=$servername; dbname=$dataname",$user);
-
+    if (!empty($nom_commerciaux)) {
+        
+    }
         $variable = $connect->prepare ("INSERT INTO commerciaux (nom_commerciaux, date_inscription) VALUE (:floatingInput, :date_inscription)");
         $variable->bindParam(':floatingInput', $nom_commerciaux);
         $variable->bindParam(':date_inscription', $date_inscription);
@@ -48,5 +51,6 @@
         echo "Erreur : ". $e->getMessage();
     }
     ?>
+
 </body>
 </html>
