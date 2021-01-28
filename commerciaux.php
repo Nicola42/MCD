@@ -14,14 +14,14 @@
             <li><a href="produits.php">Produits</a></li>
         </ul>
     </nav>
-    <form action="commerciaux.php" method="post">
-        <div class="form-floating m-4">
+    <form action="commerciaux.php" method="post" class="box-name">
+        <div class="form-floating">
             <input type="text" class="form-control" id="floatingInput">
             <label for="floatingInput">Name</label>
         </div>
-        <div>
+        <div class="datation">
             <label for="date_inscription">Date :</label>
-            <input type="date" id="date_inscription" name="date_inscription">
+            <input class="form-control" type="date" placeholder="Readonly input here..." id="date_inscription" name="date_inscription">
         </div>
         <div>
             <input class="btn btn-primary" type="submit" value="Send">

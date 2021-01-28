@@ -46,5 +46,24 @@ nav a:hover{
 
 body {
     background-color: rgb(248, 234, 165);
-    
+    position: relative;
 } 
+
+
+.form_div{
+    color: rgb(255, 174, 0);
+    text-align: center;
+    width: 200px;
+    position: absolute;
+    left: 580px;
+}
+
+#floatingInput{
+    margin: 50px 0px;
+    text-align: center;
+}
+
+.nombre{
+    margin: 60px 0px;
+    text-align: center;
+}

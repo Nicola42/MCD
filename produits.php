@@ -14,12 +14,12 @@
             <li><a href="produits.php">Produits</a></li>
         </ul>
     </nav>
-    <form action="produits.php" method="post">
-        <div>
+    <form action="produits.php" method="post" class="form_div">
+        <div class="nombre">
             <label for="id_produit">id_produit</label>
             <input type="number" id="id_produit" name="id_produit"> 
         </div>
-        <div class="form-floating m-4">
+        <div class="form-floating">
             <input type="text" class="form-control" id="floatingInput">
             <label for="floatingInput">Nom produits</label>
         </div>
