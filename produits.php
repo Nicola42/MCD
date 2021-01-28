@@ -23,7 +23,9 @@
             <label for="nom_produit">nom_produit</label>
             <input type="text" id="nom_produit" name="name">
         </div>
-            <input type="sumbit" value="send">
-    ></form>
+        <div>
+            <input type="submit" value="Send">
+        </div>
+    </form>
 </body>
 </html>
