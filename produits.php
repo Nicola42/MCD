@@ -8,16 +8,22 @@
     <title>Produits</title>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="commerciaux.php">Inscription</a></li>
+            <li><a href="produits.php">Produits</a></li>
+        </ul>
+    </nav>
     <form action="produits.php" method="post">
         <div>
             <label for="id_produit">id_produit</label>
-            <input type="number" id='id_produit' name='id_produit'> 
+            <input type="number" id="id_produit" name="id_produit"> 
         </div>
         <div>
             <label for="nom_produit">nom_produit</label>
-            <input type="text" id='nom_produit' name='name'>
+            <input type="text" id="nom_produit" name="name">
         </div>
-            <input type='sumbit' value='send'>
+            <input type="sumbit" value="send">
     ></form>
 </body>
 </html>

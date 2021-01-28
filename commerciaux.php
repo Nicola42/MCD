@@ -8,6 +8,12 @@
     <title>Inscription</title>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="commerciaux.php">Inscription</a></li>
+            <li><a href="produits.php">Produits</a></li>
+        </ul>
+    </nav>
     <form action="commerciaux.php" method="post">
         <div>
             <label for="nom_commerciaux">Nom :</label>
