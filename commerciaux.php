@@ -39,7 +39,7 @@
     try {
         $connect = new PDO("mysql:host=$servername; dbname=$dataname",$user);
     if (!empty($nom_commerciaux)) {
-        
+        coucou 
     }
         $variable = $connect->prepare ("INSERT INTO commerciaux (nom_commerciaux, date_inscription) VALUE (:floatingInput, :date_inscription)");
         $variable->bindParam(':floatingInput', $nom_commerciaux);
