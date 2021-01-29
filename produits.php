@@ -29,3 +29,12 @@
     </form>
 </body>
 </html>
+<?php
+
+$dataname='bureautique';
+try {
+    $bdd = new PDO('msql:host=localhost;dbname=bureautique', 'root');
+} catch(PDOExeption $e){
+    echo 'erreur' . $e->getMessage();
+}
+?>
