@@ -16,7 +16,7 @@
     </nav>
     <form action="commerciaux.php" method="post" class="box-name">
         <div class="form-floating">
-            <input type="text" class="form-control" id="floatingInput">
+            <input type="text" class="form-control" id="floatingInput" name="floatingInput">
             <label for="floatingInput">Name</label>
         </div>
         <div class="datation">
@@ -30,21 +30,22 @@
 
     <?php
     
-    $servername= 'localhost';
-    $dataname= 'bureautique';
-    $user ='root';
-    $nom_commerciaux=$_POST["floatingInput"];
-    $date_inscription=$_POST["date_inscription"];
+    $servername= "localhost";
+    $dataname= "bureautique";
+    $user ="root";
+    $nom_commerciaux = $_POST["floatingInput"];
+    $date_inscription = $_POST["date_inscription"];
 
     try {
-        $connect = new PDO("mysql:host=$servername; dbname=$dataname",$user);
-    if (!empty($nom_commerciaux)) {
-        ALORS 
-    }
-        $variable = $connect->prepare ("INSERT INTO commerciaux (nom_commerciaux, date_inscription) VALUE (:floatingInput, :date_inscription)");
-        $variable->bindParam(':floatingInput', $nom_commerciaux);
-        $variable->bindParam(':date_inscription', $date_inscription);
-        $variable->execute();
+        $connect = new PDO("mysql:host=$servername; dbname=$dataname", $user);
+        // $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        if (!empty($nom_commerciaux) && !empty($date_inscription)) {
+         
+            $variable = $connect->prepare ("INSERT INTO commerciaux (nom_commerciaux, date_inscription) VALUE (:floatingInput, :date_inscription)");
+            $variable->bindParam(':floatingInput', $nom_commerciaux);
+            $variable->bindParam(':date_inscription', $date_inscription);
+            $variable->execute();
+        }
     }
 
     catch (PDOException $e) {
