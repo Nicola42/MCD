@@ -29,7 +29,7 @@
     </form>
 
     <?php
-    
+    if (isset($_POST["floatingInput"])){
     $servername= "localhost";
     $dataname= "bureautique";
     $user ="root";
@@ -40,17 +40,16 @@
         $connect = new PDO("mysql:host=$servername; dbname=$dataname", $user);
         // $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         if (!empty($nom_commerciaux) && !empty($date_inscription)) {
-         
-            $variable = $connect->prepare ("INSERT INTO commerciaux (nom_commerciaux, date_inscription) VALUE (:floatingInput, :date_inscription)");
+            $variable = $connect->prepare ("INSERT INTO commerciaux (nom_commerciaux, date_inscription) VALUES (:floatingInput, :date_inscription)");
             $variable->bindParam(':floatingInput', $nom_commerciaux);
             $variable->bindParam(':date_inscription', $date_inscription);
             $variable->execute();
-        }
-    }
-
+        }}
     catch (PDOException $e) {
         echo "Erreur : ". $e->getMessage();
     }
+    }
+    
     ?>
 
 </body>
