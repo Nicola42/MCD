@@ -12,6 +12,7 @@
         <ul>
             <li><a href="commerciaux.php">Inscription</a></li>
             <li><a href="produits.php">Produits</a></li>
+            <li><a href="devis.php">Devis</a></li>
         </ul>
     </nav>
     <form action="commerciaux.php" method="post" class="box-name">
