@@ -58,8 +58,6 @@
             <label for="date_devis">date</label>
             <input type="date" id="date_devis" name="date_devis">
         </div>
-        
-
     </form>
 
 </body>
