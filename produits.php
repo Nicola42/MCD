@@ -16,25 +16,39 @@
     </nav>
     <form action="produits.php" method="post" class="form_div">
         <div class="nombre">
-            <label for="id_produit">id_produit</label>
+            <label for="id_produit">id produit</label>
             <input type="number" id="id_produit" name="id_produit"> 
         </div>
         <div class="form-floating">
-            <input type="text" class="form-control" id="floatingInput">
+            <input type="text" class="form-control" id="floatingInput" name="nom_produit">
             <label for="floatingInput">Nom produits</label>
         </div>
         <div>
             <input class="btn btn-primary" type="submit" value="Send">
         </div>
     </form>
+    <?php
+        if (isset($_POST["id_produit"])){
+            $servername= "localhost";
+            $dataname= "bureautique";
+            $user ="root";
+            $id_produit = $_POST["id_produit"];
+            $nom_produit = $_POST["nom_produit"];
+
+            try {
+                $connect = new PDO("mysql:host=$servername; dbname=$dataname", $user);
+                // $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                if (!empty($id_produit) && !empty($nom_produit)) {
+                    $variable = $connect->prepare ("INSERT INTO produits (id_produit, nom_produit) VALUES (:id_produit, :nom_produit)");
+                    $variable->bindParam(':id_produit', $id_produit);
+                    $variable->bindParam(':nom_produit', $nom_produit);
+                    $variable->execute();
+                }}
+            catch (PDOException $e) {
+                echo "Erreur : ". $e->getMessage();
+            }
+        }
+    
+    ?>
 </body>
 </html>
-<?php
-
-$dataname='bureautique';
-try {
-    $bdd = new PDO('msql:host=localhost;dbname=bureautique', 'root');
-} catch(PDOExeption $e){
-    echo 'erreur' . $e->getMessage();
-}
-?>
